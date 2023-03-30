@@ -97,4 +97,8 @@ Everything concerning the medical insurance data is stored here. This dataset is
 * med_insurance.ipynb: Some general data processing steps and a centralised model for medical insurance charge prediction
 * med_insurance_federated.ipynb: The federated model for medical insurance charge prediction
 
+## Further Resources
+
+- [Accountable Federated Machine Learning in Government](https://link.springer.com/chapter/10.1007/978-3-030-82824-0_10)
+- [EU TechSonar](https://edps.europa.eu/press-publications/publications/techsonar/federated-learning_en)
 
