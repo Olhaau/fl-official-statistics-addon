@@ -2,9 +2,77 @@
 
 Based on [fl-official-statistcs](https://github.com/joshua-stock/fl-official-statistics) this repo investigates further the feasability of Federated Learning for Official Statistics.
 
+
 ## Setup
+- **OS**: Linux is superior in convenience and stability. 
+    - A WSL (Windows-Subsystem Linux) is a convienient solution for Windows.
+- **Virtual environment**: both, conda or venv, work fine. Conda is used here.
+- **Versions**
+    - Python 3.9.* is recommended here: https://www.tensorflow.org/install/pip
+
+
+
+### Development environment
+---
+
+We use Tensorflow Federated (TFF). For further development e.g. is considerded 
+
+#### OS - Linux is recommended
+
+##### Windows restrictions
+
+Tensorflow (TF) and Tensorflow Federated (TFF) have only restricted Windows support, e.g.
+
+- **TFF - several problems**, e.g.
+  - installing TFF does run infinitely because of not resolvable dependencies, see https://stackoverflow.com/questions/69949143/tensorflow-federated-on-windows
+  - needed JAX has no Windows support, see https://github.com/google/jax/issues/438. JAX Team:
+    
+    >*Windows support is still not on the agenda. We're maxed out on other things, and moreover no one on the JAX team is a Windows user, which only makes development harder.*
+  - XLA (JAX dependency) was not fully compilable, but should now be available since TF 2.2.0.
+- **TF - no GPU support**, s. https://www.tensorflow.org/install/pip#windows-native
+  
+  > *Starting with TensorFlow 2.11, you will need to install TensorFlow in WSL2, or install tensorflow or tensorflow-cpu and, optionally, try the TensorFlow-DirectML-Plugin.*
+
+##### Windows-Subsystem for Linux
+
+**A Windows-Subsystem for Linux (WSL) can be a convenient solution**, see
+
+- Install Tensorflow using a WSL: https://www.tensorflow.org/install/pip#windows-wsl2
+- tutorial for setting up GPU support: https://www.youtube.com/watch?v=0S81koZpwPA&t=518s&pp=ygUOd3NsIHRlbnNvcmZsb3c%3D
+- General development environment in VSCode using WSL: https://code.visualstudio.com/docs/remote/wsl
+
+##### MacOS restrictions
+
+TFF is not fully available for MacOS, e.g. ...
+- only outdated versions are available, see https://github.com/tensorflow/federated/issues/3881
+- installation is complicated and partly sketchy, see
+  - https://stackoverflow.com/questions/66705900/can-tensorflow-federated-be-installed-on-apple-silicon-m1
+  - https://stackoverflow.com/questions/71839866/can-anyone-give-me-a-comprehensive-guide-to-installing-tensorflow-federated-on-m1
+  - https://discuss.tensorflow.org/t/update-tensorflow-federated-to-match-tensorflow-macos-2-7-0-and-tensorflow-metal-0-3-0/7193/10
+  - conda-forge could help: https://stackoverflow.com/questions/68327863/importing-jax-fails-on-mac-with-m1-chip
 
 more possible environment (e.g. local, R-Server) tba.
+
+#### Virtual environment
+
+**Recommended virtual environments**
+
+1. environment by ``conda`` using Python 3.9.* for TensorFlow, see [Install TensorFlow with pip](https://www.tensorflow.org/install/pip) (works fine for Tensorflow Federated)
+2. environment by ``venv``, see [Install TensorFlow Federated](https://www.tensorflow.org/federated/install)
+
+
+#### Versions
+
+- Python 3.9.* is recommended here: https://www.tensorflow.org/install/pip
+    - rem.: [asdf-vm](https://asdf-vm.com/) is convenient to manage python versions. 
+- to reproduce the used environment use (recommended):
+    - ``!pip install -r ../requirements.txt``
+- to install a new similiar environment use:
+    - ``pip install --upgrade tensorflow-federated``  
+    - simlilarly install further helpful packages
+
+For the full list of install packages see [requirements.txt](../requirements.txt). E.g. the following tensorflow[...] versions are used.
+
 
 ### Google Colab
 
