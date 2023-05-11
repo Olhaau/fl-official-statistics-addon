@@ -141,7 +141,12 @@ def model_fn(
 
     return _model
 
-def train_fed(process, train_data,
+def train_fed(
+    model,
+    train_data,
+    eval_data = None,
+    client_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
+    server_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
     NUM_ROUNDS = 50,
     NUM_EPOCHS = 50,
     BATCH_SIZE = 128,
@@ -150,7 +155,24 @@ def train_fed(process, train_data,
     SEED = 42,
     verbose = True
     ):
+
+    """
+    FIXME: inputs and outputs
     
+    cf. https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#evaluation
+    """
+    
+    # if validation_split in arguments
+    # eval setup
+    #n_eval = [int(
+    #    validation_split * 
+    #    len(list(data.as_numpy_iterator()))
+    #) for data in train_data]
+    #train_data = [data.shuffle(10, seed = SEED, reshuffle_each_iteration=False) for data in train_data]
+    #eval_data  = [train_data[i].take(n_eval[i]) for i in range(len(train_data))]
+    #train_data = [train_data[i].skip(n_eval[i]) for i in range(len(train_data))]
+
+
     # prep the data
     train_data = [
         data.
@@ -159,23 +181,62 @@ def train_fed(process, train_data,
             batch(BATCH_SIZE).
             prefetch(PREFETCH_BUFFER)
 
-        for data in train_data]
+      for data in train_data]
     
-    # initialize the process
-    state = process.initialize()
-    hist= []
+    # initialize the process (and evalation if any)
 
+    process = tff.learning.algorithms.build_weighted_fed_avg(
+        model,
+        client_optimizer_fn = client_optimizer,
+        server_optimizer_fn = server_optimizer)
+    
+
+    state = process.initialize()
+    hist  = []
+
+    if eval_data != None:
+        eval_process  = tff.learning.algorithms.build_fed_eval(model)
+        eval_state    = eval_process.initialize()
+        model_weights = process.get_model_weights(state)
+        eval_state    = eval_process.set_model_weights(eval_state, model_weights)
+        _, perf_eval  = eval_process.next(eval_state, eval_data)
+
+    # training
     for round in range(NUM_ROUNDS):
         
-        if SEED != None: tf.keras.utils.set_random_seed(SEED)
-        result  = process.next(state, train_data)
+        # calculate the evaluation performance (before updating the model!)
+        # Note:
+        # - 'process' generally reflect the performance of the model at the beginning of the round, 
+        # - if not calculated first, the evaluation metrics will always be one step ahead
+        if eval_data != None:
+            
+            model_weights = process.get_model_weights(state)
+            eval_state    = eval_process.set_model_weights(eval_state, model_weights)
+            _, perf_eval  = eval_process.next(eval_state, eval_data)
+            perf_eval = dict(perf_eval['client_work']['eval']['current_round_metrics'].items())
+            
         
-        state   = result.state
-        metrics = dict(result.metrics['client_work']['train'].items())
+        # update FL process
+        if SEED != None: tf.keras.utils.set_random_seed(SEED)
+        state, perf = process.next(state, train_data)
+        perf = dict(perf['client_work']['train'].items())
 
-        hist.append(metrics)
+        # generate outputs
+        if verbose: 
+            print('====== ROUND {:2d} / {} ======'.format(round + 1, NUM_ROUNDS))
+            print('TRAIN: {}'.format(perf))
+            if eval_data != None: 
+                print('EVAL:  {}'.format(perf_eval))
 
-        if verbose == True: print('round {:2d} / {}, metrics = {}'.format(round + 1, NUM_ROUNDS, metrics))
-
+        
+        # combine perf and perf_eval
+        if eval_data != None:
+            # rename keys in perf_eval
+            perf_eval = {'val_' + key : val for key, val in  perf_eval.items()}
+            # merge perf and perf_eval (> Python 3.9)
+            perf = perf | perf_eval
+        
+        # extend history
+        hist.append(perf)
 
     return {'process': process, 'history': hist, 'state': state}
