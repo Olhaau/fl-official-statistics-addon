@@ -4,6 +4,8 @@ import os
 import tqdm
 from sklearn.model_selection import train_test_split, RepeatedKFold
 from sklearn.metrics import r2_score
+# r2 from tf. nightly?
+#https://www.tensorflow.org/api_docs/python/tf/keras/metrics/R2Score
 import matplotlib.pyplot as plt
 from itertools import product
 from math import floor
