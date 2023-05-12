@@ -4,8 +4,9 @@ import os
 import tqdm
 from sklearn.model_selection import train_test_split, RepeatedKFold
 from sklearn.metrics import r2_score
-# r2 from tf. nightly?
+# r2 only available in tf-nightly
 #https://www.tensorflow.org/api_docs/python/tf/keras/metrics/R2Score
+
 import matplotlib.pyplot as plt
 from itertools import product
 from math import floor
@@ -13,6 +14,7 @@ import time
 
 import tensorflow as tf
 import tensorflow_federated as tff
+#import tensorflow_addons as tfa
 from keras.models import Sequential
 from keras.layers import Dense, InputLayer
 from keras.callbacks import CSVLogger
@@ -140,8 +142,11 @@ def model_fn(
                 tf.TensorSpec((None,),           dtype = tf.float64)
             ), loss = loss, 
             metrics =  [
-                tf.keras.metrics.MeanAbsoluteError(), 
-                tf.keras.metrics.MeanSquaredError()]
+                tf.keras.metrics.MeanAbsoluteError()
+                , tf.keras.metrics.MeanSquaredError()
+                #, tfa.metrics.RSquare()
+                #, tf.keras.metrics.R2Score() # only available in tf-nightly
+                ]
         )
 
     return _model
