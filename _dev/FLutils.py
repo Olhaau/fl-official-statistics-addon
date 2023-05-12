@@ -138,7 +138,10 @@ def model_fn(
                 tf.TensorSpec((None, keras_model.input.shape[1]
                 ), dtype = tf.float64),
                 tf.TensorSpec((None,),           dtype = tf.float64)
-            ), loss = loss, metrics =  [tf.keras.metrics.MeanAbsoluteError(), tf.keras.metrics.MeanSquaredError()]
+            ), loss = loss, 
+            metrics =  [
+                tf.keras.metrics.MeanAbsoluteError(), 
+                tf.keras.metrics.MeanSquaredError()]
         )
 
     return _model
