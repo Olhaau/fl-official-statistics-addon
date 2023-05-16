@@ -63,7 +63,7 @@ def create_keras_model(
     units = [40, 40, 20], 
     activations = ['relu'] * 3, 
     compile = True,
-    loss = tf.losses.mae,
+    loss = 'mean_squared_error',
     optimizer = tf.optimizers.legacy.Adam(learning_rate = .05),
     metrics = ["mae", 'mean_squared_error', r2_score], 
     run_eagerly = True
