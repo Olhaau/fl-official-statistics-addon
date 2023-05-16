@@ -221,7 +221,7 @@ def train_fed(model, train_data,
     ):
 
     """
-    FIXME: inputs and outputs
+    FIXME: document inputs and outputs
     
     cf. https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#evaluation
     """
