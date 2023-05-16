@@ -115,8 +115,7 @@ def create_keras_model(
 
   return model
 
-def model_fn(
-    keras_creator,
+def model_fn(keras_creator,
     loss = tf.keras.losses.MeanAbsoluteError()
     #,metrics = [tf.keras.metrics.MeanAbsoluteError()]
     ):
@@ -151,9 +150,64 @@ def model_fn(
 
     return _model
 
-def train_fed(
-    model,
-    train_data,
+def train_model(model, X_train, y_train,
+    epochs           = 100,
+    batch_size       = 128,
+    shuffle          = True,
+    validation_split = 0.2,
+    verbose          = 0,
+    output_msr       = 'loss',
+    seed             = 42,
+    **kwargs
+    ):
+  
+  """Compile and train a Keras neural network.
+  
+  For additional arguments see https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit.
+
+  Parameters
+  ------------
+  model: keras.engine.sequential.Sequential
+  X_train: dataFrame
+  y_train: dataFrame
+  shuffle: bool
+  epochs: int
+  validation_split: float
+  verbose: int
+    verbose of model.fit(...)
+  output_msr: str
+    measure for custom output.
+  batch_size: int
+    batch_size of model.fit(...)   
+
+  Return
+  ------------
+    hist: keras.callbacks.History
+      History of model.fit(...)
+  """
+
+  # fit with custom verbose
+  starttime = time.time()
+  
+  if seed != None: tf.keras.utils.set_random_seed(seed)
+
+  hist = model.fit(
+    X_train, 
+    y_train,
+    batch_size = batch_size, 
+    shuffle    = shuffle,
+    validation_split = validation_split,
+    epochs     = epochs,
+    verbose    = verbose, 
+    **kwargs
+  )
+  print(
+      "R^2  = %.4f, " % hist.history[output_msr][-1],
+      "time = %.1f sec" % ((time.time() - starttime)))
+  
+  return hist
+
+def train_fed(model, train_data,
     eval_data = None,
     client_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
     server_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
@@ -250,3 +304,28 @@ def train_fed(
         hist.append(perf)
 
     return {'process': process, 'history': hist, 'state': state}
+
+def test_model(model, X_test, y_test, 
+               verbose = False):
+  """
+  Parameters
+  ------------
+  model: keras.engine.sequential.Sequential
+    Fitted model.
+  X_test, y_test: dataFrame
+    Test data.
+  verbose: bool
+    Output control.
+
+  Output
+  ------------
+  perf: list of float
+    The test performances.
+  """
+
+  start = time.time() 
+  perf  = model.evaluate(X_test, y_test, verbose = 0)[1:]
+
+  if verbose: print('time - test: %.2f' % (time.time() - start / 60))
+  
+  return perf
