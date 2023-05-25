@@ -20,49 +20,71 @@ from keras.layers import Dense, InputLayer
 from keras.callbacks import CSVLogger
 
 
-def load_df(paths):
-    """ Loads data from a path to a csv-file.
+def load_df(paths: list[str]) -> pd.DataFrame:
+
+  """Reads a dataset from a list of possible paths to a csv-file.
+
+  Args:
+    paths (list[str]): Possible locations of the csv-file.
+
+  Returns:
+    pd.DataFrame: The loaded dataset.
+  """
+
+  df = pd.DataFrame()
+
+  if isinstance(paths, str): paths = [paths]
     
-    :param df_locs: possible locations of a CSV file
-    :type df_locs: str or list of str
-    :output: Ingested Data.
-    :rtype: pandas.DataFrame 
-    """
-    df = pd.DataFrame()
+  for path in paths:
+    try:
+      df = pd.read_csv(path, index_col = 0)
+      print("loaded data from {}".format(path))
+      if len(df) != 0: break
+    except Exception as ex:
+      print("{} in ".format(type(ex).__name__), path)
 
-    if isinstance(paths, str): paths = [paths]
-    
-    for path in paths:
-        try:
-            df = pd.read_csv(path, index_col = 0)
-            print("loaded data from {}".format(path))
-            if len(df) != 0: break
-        except Exception as ex:
-            print("{} in ".format(type(ex).__name__), path)
+  return df
 
-    return df
+def prep_fed_train(X_train: pd.DataFrame, y_train: pd.DataFrame):
+  """Converts training data to Tensor Object.
+  
+  See https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#preprocessing_the_input_data
 
-def prep_fed_train(X_train, y_train):
-    """
-    See https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#preprocessing_the_input_data
-    """
+  Args:
+      X_train (pd.DataFrame): Training features.
+      y_train (pd.DataFrame): Training target.
 
-    return tf.data.Dataset.from_tensor_slices((
-        tf.convert_to_tensor(X_train), 
-        tf.convert_to_tensor(y_train)
-        ))
+  Returns:
+      A `Tensor` based on `X_test`, `y_test`.
+  """
 
-def prep_fed_test(X_test, y_test):
-   return tf.data.Dataset.from_tensor_slices((
-       tf.convert_to_tensor(np.expand_dims(X_test, axis=0)), 
-       tf.convert_to_tensor(np.expand_dims(y_test, axis=0))
-       )) 
+  return tf.data.Dataset.from_tensor_slices((
+    tf.convert_to_tensor(X_train), 
+    tf.convert_to_tensor(y_train)
+    ))
+
+def prep_fed_test(X_test: pd.DataFrame, y_test: pd.DataFrame):
+  """Converts test data to Tensor Object.
+
+  See https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#preprocessing_the_input_data
+
+  Args:
+      X_test (pd.DataFrame): Test features.
+      y_test (pd.DataFrame): Test target.
+
+  Returns:
+      A `Tensor` based on `X_test`, `y_test`.
+  """
+  return tf.data.Dataset.from_tensor_slices((
+    tf.convert_to_tensor(np.expand_dims(X_test, axis=0)), 
+    tf.convert_to_tensor(np.expand_dims(y_test, axis=0))
+    )) 
 
 def create_keras_model(
-    nfeatures = 9,
-    units = [40, 40, 20], 
-    activations = ['relu'] * 3, 
-    compile = True,
+    nfeatures: int = 9,
+    units: list[int] = [40, 40, 20], 
+    activations: list[str] = ['relu'] * 3, 
+    compile: bool = True,
     loss = 'mean_squared_error',
     optimizer = tf.optimizers.legacy.Adam(learning_rate = .05),
     metrics = ["mae", 'mean_squared_error', r2_score], 
@@ -105,7 +127,7 @@ def create_keras_model(
   model.add(Dense(1))
   
   # compile model
-  if compile:
+  if compile == True:
     model.compile(
       loss = loss,
       optimizer = optimizer,
@@ -115,40 +137,52 @@ def create_keras_model(
 
   return model
 
+
+
 def model_fn(keras_creator,
-    loss = tf.keras.losses.MeanAbsoluteError()
-    #,metrics = [tf.keras.metrics.MeanAbsoluteError()]
-    ):
-    """ Wrap a Keras model as Tensorflow Federated model. 
+  loss: tf.keras.losses = tf.keras.losses.MeanAbsoluteError()
+  #,metrics = [tf.keras.metrics.MeanAbsoluteError()]
+  ) -> tff.learning.models:
+  """  Wrap a Keras model as Tensorflow Federated model. 
+
+  Cf. https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#creating_a_model_with_keras
+
+
+  Args:
+      keras_creator: Function returning a keras.engine.sequential.Sequential.
+      loss (tf.keras.losses, optional): loss used for optimization. Defaults to tf.keras.losses.MeanAbsoluteError().
+  
+  Returns:
     
-    cf. https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#creating_a_model_with_keras
-    """
-    def _model():
-        # We _must_ create a new model here, and _not_ capture it from an external
-        # scope. TFF will call this within different graph contexts.
-        
-        #keras_model = create_keras_model(
-        #    nfeatures = nfeatures, compile = False#, **kwargs
-        #    )
-        
-        keras_model = keras_creator()
+  """
 
-        return tff.learning.models.from_keras_model(
-            keras_model,
-            input_spec = (
-                tf.TensorSpec((None, keras_model.input.shape[1]
-                ), dtype = tf.float64),
-                tf.TensorSpec((None,),           dtype = tf.float64)
-            ), loss = loss, 
-            metrics =  [
-                tf.keras.metrics.MeanAbsoluteError()
-                , tf.keras.metrics.MeanSquaredError()
-                #, tfa.metrics.RSquare()
-                #, tf.keras.metrics.R2Score() # only available in tf-nightly
-                ]
-        )
 
-    return _model
+  def _model():
+    # We _must_ create a new model here, and _not_ capture it from an external
+    # scope. TFF will call this within different graph contexts.
+    
+    #keras_model = create_keras_model(
+    #    nfeatures = nfeatures, compile = False#, **kwargs
+    #    )
+    
+    keras_model = keras_creator()
+
+    return tff.learning.models.from_keras_model(
+      keras_model,
+      input_spec = (
+        tf.TensorSpec((None, keras_model.input.shape[1]
+        ), dtype = tf.float64),
+        tf.TensorSpec((None,),           dtype = tf.float64)
+      ), loss = loss, 
+      metrics =  [
+        tf.keras.metrics.MeanAbsoluteError()
+        , tf.keras.metrics.MeanSquaredError()
+        #, tfa.metrics.RSquare()
+        #, tf.keras.metrics.R2Score() # only available in tf-nightly
+        ]
+    )
+
+  return _model
 
 def train_model(model, X_train, y_train,
     epochs           = 100,
