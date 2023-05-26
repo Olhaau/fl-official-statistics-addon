@@ -236,8 +236,9 @@ def train_model(model, X_train, y_train,
     **kwargs
   )
   print(
-      "R^2  = %.4f, " % hist.history[output_msr][-1],
-      "time = %.1f sec" % ((time.time() - starttime)))
+    "%s  = %.4f," % (output_msr, hist.history[output_msr][-1]),
+    "time = %.1f sec" % ((time.time() - starttime))
+  )
   
   return hist
 
@@ -338,6 +339,44 @@ def train_fed(model, train_data,
         hist.append(perf)
 
     return {'process': process, 'history': hist, 'state': state}
+
+def plot_hist(
+  history, 
+  msr: str = "r2_score", 
+  title: str = None,
+  ylim : list[float] = [0.5, 0.9], 
+  savepath: str = None):
+  """Plots the performance of keras histories.
+
+  Args:
+      history (_type_): Keras History.
+      msr (str, optional): Name of a performance measure. Defaults to "r2_score".
+      title (str, optional): Title of the plot. Defaults to None.
+      ylim (list[float], optional): y limits. Defaults to [0.5, 0.9].
+      savepath (str, optional): Save the plot to the path. Defaults to None.
+  """
+  
+  
+    
+  if not isinstance(history, list): history = [history]
+
+  
+  y = np.array([hist[msr] for hist in history]).transpose()
+  yval = np.array([hist['val_' + msr] for hist in history]).transpose()
+  plt.plot(y, color = 'blue', alpha = .2)
+  plt.plot(yval, color = 'orange', alpha = .2)
+  plt.plot(np.quantile(y,.5, axis = 1), label = 'Training', color = 'blue')
+  plt.plot(np.quantile(yval,.5, axis = 1), label = 'Evaluation', color = 'orange')
+  plt.ylim(ylim)
+  plt.xlabel("epochs")
+  plt.ylabel(msr)
+  if title != None: plt.suptitle(title)
+  plt.title('Training performance')
+  plt.legend()
+  
+  if savepath != None: plt.savefig(savepath)
+  plt.show()
+
 
 def test_model(model, X_test, y_test, 
                verbose = False):
