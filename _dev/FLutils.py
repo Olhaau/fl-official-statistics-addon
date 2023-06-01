@@ -235,10 +235,12 @@ def train_model(model, X_train, y_train,
     verbose    = verbose, 
     **kwargs
   )
-  print(
-    "%s  = %.4f," % (output_msr, hist.history[output_msr][-1]),
-    "time = %.1f sec" % ((time.time() - starttime))
-  )
+  
+  if verbose != 0:
+    print(
+      "%s  = %.4f," % (output_msr, hist.history[output_msr][-1]),
+      "time = %.1f sec" % ((time.time() - starttime))
+    )
   
   return hist
 
