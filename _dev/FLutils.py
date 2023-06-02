@@ -244,35 +244,45 @@ def train_model(model, X_train, y_train,
   
   return hist
 
-def train_fed(model, train_data,
-    eval_data = None,
+
+
+def train_fed(model, train_data: list,
+    eval_data: list = None,
     client_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
     server_optimizer = lambda: tf.optimizers.Adam(learning_rate = .05),
-    NUM_ROUNDS = 50,
-    NUM_EPOCHS = 50,
-    BATCH_SIZE = 128,
-    SHUFFLE_BUFFER = 20,
-    PREFETCH_BUFFER = 5,
-    SEED = 42,
-    verbose = True
-    ):
+    NUM_ROUNDS: int = 50,
+    NUM_EPOCHS: int = 50,
+    BATCH_SIZE: int = 128,
+    SHUFFLE_BUFFER: int = 20,
+    PREFETCH_BUFFER: int = 5,
+    SEED: int = 42,
+    verbose: bool = True
+    ) -> dict:
+    """Train a keras model with distributed data by federated learning.
 
-    """
-    FIXME: document inputs and outputs
-    
     cf. https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification#evaluation
-    """
-    
-    # if validation_split in arguments
-    # eval setup
-    #n_eval = [int(
-    #    validation_split * 
-    #    len(list(data.as_numpy_iterator()))
-    #) for data in train_data]
-    #train_data = [data.shuffle(10, seed = SEED, reshuffle_each_iteration=False) for data in train_data]
-    #eval_data  = [train_data[i].take(n_eval[i]) for i in range(len(train_data))]
-    #train_data = [train_data[i].skip(n_eval[i]) for i in range(len(train_data))]
 
+
+    Args:
+        model: keras_model as archetype for the federated trained model. 
+        train_data (list): List of training datasets (as tensors)
+        eval_data (list, optional): List of evaluation datasets (as tensors). Defaults to None.
+        client_optimizer (optional): Optimizing algorithm for the learning of each client. Defaults to lambda:tf.optimizers.Adam(learning_rate = .05).
+        server_optimizer (optional): Optimizing algorithm for the server. Defaults to lambda:tf.optimizers.Adam(learning_rate = .05).
+        NUM_ROUNDS (int, optional): Number of federated learning rounds. In each round the server sends each client a model to improve it. Defaults to 50.
+        NUM_EPOCHS (int, optional): Number of epochs per client per round. Defaults to 50.
+        BATCH_SIZE (int, optional): Number of samples per learning update of each client. Defaults to 128.
+        SHUFFLE_BUFFER (int, optional): The dataset is shuffled. `SHUFFLE_BUFFER` is the number of samples which are randomized. Defaults to 20.
+        PREFETCH_BUFFER (int, optional): See https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset#prefetch. Defaults to 5.
+        SEED (int, optional): SEED for all randomized calculations. Defaults to 42.
+        verbose (bool, optional): Status messages? Defaults to True.
+
+    Returns:
+        dict: Dict containing the resulting learning_process, history, state. 
+    """
+
+
+    
 
     # prep the data
     train_data = [
