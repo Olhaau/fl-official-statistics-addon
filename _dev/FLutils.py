@@ -137,8 +137,6 @@ def create_keras_model(
 
   return model
 
-
-
 def model_fn(keras_creator,
   loss: tf.keras.losses = tf.keras.losses.MeanAbsoluteError()
   #,metrics = [tf.keras.metrics.MeanAbsoluteError()]
@@ -243,8 +241,6 @@ def train_model(model, X_train, y_train,
     )
   
   return hist
-
-
 
 def train_fed(model, train_data: list,
     eval_data: list = None,
@@ -361,7 +357,7 @@ def plot_hist(
   """Plots the performance of keras histories.
 
   Args:
-      history (_type_): Keras History.
+      history: Keras History.
       msr (str, optional): Name of a performance measure. Defaults to "r2_score".
       title (str, optional): Title of the plot. Defaults to None.
       ylim (list[float], optional): y limits. Defaults to [0.5, 0.9].
@@ -388,7 +384,6 @@ def plot_hist(
   
   if savepath != None: plt.savefig(savepath)
   plt.show()
-
 
 def test_model(model, X_test, y_test, 
                verbose = False):
