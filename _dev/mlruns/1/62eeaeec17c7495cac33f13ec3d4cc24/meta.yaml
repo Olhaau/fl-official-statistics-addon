@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/62eeaeec17c7495cac33f13ec3d4cc24/artifacts
+end_time: 1687416401553
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 62eeaeec17c7495cac33f13ec3d4cc24
+run_name: Gradient Boosting Regressor
+run_uuid: 62eeaeec17c7495cac33f13ec3d4cc24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687416401140
+status: 3
+tags: []
+user_id: olihauke

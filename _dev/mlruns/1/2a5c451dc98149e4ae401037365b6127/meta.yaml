@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/2a5c451dc98149e4ae401037365b6127/artifacts
+end_time: 1687424009657
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 2a5c451dc98149e4ae401037365b6127
+run_name: K Neighbors Regressor
+run_uuid: 2a5c451dc98149e4ae401037365b6127
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687424009625
+status: 3
+tags: []
+user_id: olihauke

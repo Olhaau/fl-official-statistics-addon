@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/d5787c57b9a44e13afa10d20ce64fc42/artifacts
+end_time: 1687417050016
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: d5787c57b9a44e13afa10d20ce64fc42
+run_name: CatBoost Regressor
+run_uuid: d5787c57b9a44e13afa10d20ce64fc42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687417049576
+status: 3
+tags: []
+user_id: olihauke

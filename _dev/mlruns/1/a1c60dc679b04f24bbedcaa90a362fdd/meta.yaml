@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/a1c60dc679b04f24bbedcaa90a362fdd/artifacts
+end_time: 1687422183972
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: a1c60dc679b04f24bbedcaa90a362fdd
+run_name: Extra Trees Regressor
+run_uuid: a1c60dc679b04f24bbedcaa90a362fdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687422183471
+status: 3
+tags: []
+user_id: olihauke

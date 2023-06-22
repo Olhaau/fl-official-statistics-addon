@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/a45781f0f09a4f53b6ef16b17168ddc0/artifacts
+end_time: 1687332460810
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: a45781f0f09a4f53b6ef16b17168ddc0
+run_name: Elastic Net
+run_uuid: a45781f0f09a4f53b6ef16b17168ddc0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687332460721
+status: 3
+tags: []
+user_id: olihauke

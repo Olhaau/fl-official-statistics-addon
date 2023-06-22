@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/945a1b2e718c4472aa66092cb8b15a00/artifacts
+end_time: 1687333162090
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 945a1b2e718c4472aa66092cb8b15a00
+run_name: Bayesian Ridge
+run_uuid: 945a1b2e718c4472aa66092cb8b15a00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687333161988
+status: 3
+tags: []
+user_id: olihauke

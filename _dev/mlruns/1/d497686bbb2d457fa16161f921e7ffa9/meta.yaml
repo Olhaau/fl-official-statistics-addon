@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/d497686bbb2d457fa16161f921e7ffa9/artifacts
+end_time: 1687332458696
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: d497686bbb2d457fa16161f921e7ffa9
+run_name: Huber Regressor
+run_uuid: d497686bbb2d457fa16161f921e7ffa9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687332458608
+status: 3
+tags: []
+user_id: olihauke

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/6be7c5bb000242e7bacf577c1d67f07a/artifacts
+end_time: 1687426749347
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 6be7c5bb000242e7bacf577c1d67f07a
+run_name: Linear Regression
+run_uuid: 6be7c5bb000242e7bacf577c1d67f07a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687426748929
+status: 3
+tags: []
+user_id: olihauke

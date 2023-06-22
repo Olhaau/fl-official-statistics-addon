@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/ee3e636f602c49dd8a424836963a8deb/artifacts
+end_time: 1687331830204
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ee3e636f602c49dd8a424836963a8deb
+run_name: Ridge Regression
+run_uuid: ee3e636f602c49dd8a424836963a8deb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687331830146
+status: 3
+tags: []
+user_id: olihauke

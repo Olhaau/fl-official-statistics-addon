@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/8da11d564d3a4dbc9e29d01feaf779ba/artifacts
+end_time: 1687332452477
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 8da11d564d3a4dbc9e29d01feaf779ba
+run_name: Light Gradient Boosting Machine
+run_uuid: 8da11d564d3a4dbc9e29d01feaf779ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687332452355
+status: 3
+tags: []
+user_id: olihauke

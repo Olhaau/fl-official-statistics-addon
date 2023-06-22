@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/3dcb7584c8254ee7b5d20f3bc6454cb6/artifacts
+end_time: 1687333549593
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 3dcb7584c8254ee7b5d20f3bc6454cb6
+run_name: Random Forest Regressor
+run_uuid: 3dcb7584c8254ee7b5d20f3bc6454cb6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687333548978
+status: 3
+tags: []
+user_id: olihauke

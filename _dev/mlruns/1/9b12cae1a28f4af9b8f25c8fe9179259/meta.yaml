@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/9b12cae1a28f4af9b8f25c8fe9179259/artifacts
+end_time: 1687333160542
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 9b12cae1a28f4af9b8f25c8fe9179259
+run_name: Least Angle Regression
+run_uuid: 9b12cae1a28f4af9b8f25c8fe9179259
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687333160446
+status: 3
+tags: []
+user_id: olihauke

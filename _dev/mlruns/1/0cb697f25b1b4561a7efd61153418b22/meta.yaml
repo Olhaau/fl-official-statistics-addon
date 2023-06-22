@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/0cb697f25b1b4561a7efd61153418b22/artifacts
+end_time: 1687333161077
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 0cb697f25b1b4561a7efd61153418b22
+run_name: Lasso Regression
+run_uuid: 0cb697f25b1b4561a7efd61153418b22
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687333160973
+status: 3
+tags: []
+user_id: olihauke

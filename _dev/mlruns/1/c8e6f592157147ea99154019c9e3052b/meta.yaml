@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/c8e6f592157147ea99154019c9e3052b/artifacts
+end_time: 1687418671825
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c8e6f592157147ea99154019c9e3052b
+run_name: Decision Tree Regressor
+run_uuid: c8e6f592157147ea99154019c9e3052b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687418671795
+status: 3
+tags: []
+user_id: olihauke

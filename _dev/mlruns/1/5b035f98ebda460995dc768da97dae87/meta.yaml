@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/5b035f98ebda460995dc768da97dae87/artifacts
+end_time: 1687418670804
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 5b035f98ebda460995dc768da97dae87
+run_name: Extreme Gradient Boosting
+run_uuid: 5b035f98ebda460995dc768da97dae87
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687418670768
+status: 3
+tags: []
+user_id: olihauke

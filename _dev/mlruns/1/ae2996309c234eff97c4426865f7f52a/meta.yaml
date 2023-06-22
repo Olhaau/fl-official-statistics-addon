@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/ae2996309c234eff97c4426865f7f52a/artifacts
+end_time: 1687414729794
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ae2996309c234eff97c4426865f7f52a
+run_name: Session Initialized 4688
+run_uuid: ae2996309c234eff97c4426865f7f52a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687414656924
+status: 3
+tags: []
+user_id: olihauke

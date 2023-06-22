@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/583d307d5a68486cbe2553c7dd661c3d/artifacts
+end_time: 1687418672161
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 583d307d5a68486cbe2553c7dd661c3d
+run_name: Dummy Regressor
+run_uuid: 583d307d5a68486cbe2553c7dd661c3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687418672134
+status: 3
+tags: []
+user_id: olihauke

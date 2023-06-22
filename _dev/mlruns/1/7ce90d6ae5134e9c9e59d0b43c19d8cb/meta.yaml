@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/7ce90d6ae5134e9c9e59d0b43c19d8cb/artifacts
+end_time: 1687332460333
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 7ce90d6ae5134e9c9e59d0b43c19d8cb
+run_name: Orthogonal Matching Pursuit
+run_uuid: 7ce90d6ae5134e9c9e59d0b43c19d8cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687332460220
+status: 3
+tags: []
+user_id: olihauke

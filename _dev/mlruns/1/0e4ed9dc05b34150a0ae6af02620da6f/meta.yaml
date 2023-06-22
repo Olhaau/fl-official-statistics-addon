@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/0e4ed9dc05b34150a0ae6af02620da6f/artifacts
+end_time: 1687333165152
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 0e4ed9dc05b34150a0ae6af02620da6f
+run_name: Passive Aggressive Regressor
+run_uuid: 0e4ed9dc05b34150a0ae6af02620da6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687333165061
+status: 3
+tags: []
+user_id: olihauke

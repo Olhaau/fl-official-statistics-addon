@@ -1,0 +1,15 @@
+artifact_uri: file:///home/olihauke/code/federated-learning/fl-official-statistics-addon/_dev/mlruns/1/a72137e150ea4864a1d84a8d47f3835f/artifacts
+end_time: 1687422197962
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: a72137e150ea4864a1d84a8d47f3835f
+run_name: AdaBoost Regressor
+run_uuid: a72137e150ea4864a1d84a8d47f3835f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687422197464
+status: 3
+tags: []
+user_id: olihauke
