@@ -42304,3 +42304,26 @@ _catboost.CatBoostError: /src/catboost/catboost/private/libs/options/boosting_op
 2023-06-22 11:42:58,128:INFO:Declaring metric variables
 2023-06-22 11:42:58,131:INFO:Defining Hyperparameters
 2023-06-22 11:42:58,132:INFO:100 is bigger than total combinations 1, setting search algorithm to grid
+2023-06-23 09:58:14,134:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:14,134:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:14,134:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:14,134:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:14,743:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-23 09:58:34,422:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:34,423:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:34,423:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:34,423:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-23 09:58:34,640:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-23 09:58:34,737:WARNING:/home/olihauke/.asdf/installs/python/miniconda3-latest/envs/env-tff/lib/python3.9/site-packages/tpot/builtins/__init__.py:36: UserWarning: Warning: optional dependency `torch` is not available. - skipping import of NN models.
+  warnings.warn("Warning: optional dependency `torch` is not available. - skipping import of NN models.")
+
