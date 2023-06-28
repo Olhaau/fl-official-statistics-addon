@@ -1,0 +1,243 @@
+2023-06-27 17:39:52,641:WARNING:/tmp/ipykernel_37455/2485579552.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:03,653:WARNING:/tmp/ipykernel_37455/2408874002.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:09,898:WARNING:/tmp/ipykernel_37455/2485579552.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:17,322:WARNING:/tmp/ipykernel_37455/2527056075.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:21,579:WARNING:/tmp/ipykernel_37455/2485579552.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:26,199:WARNING:/tmp/ipykernel_37455/260803106.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:31,066:WARNING:/tmp/ipykernel_37455/265379946.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:40:42,081:WARNING:/tmp/ipykernel_37455/2841767284.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:58:54,900:WARNING:/tmp/ipykernel_37455/3860341201.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:11,899:WARNING:/tmp/ipykernel_37455/861264766.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:28,253:WARNING:/tmp/ipykernel_37455/3594387632.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:33,896:WARNING:/tmp/ipykernel_37455/3708489003.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:37,102:WARNING:/tmp/ipykernel_37455/2000405357.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:39,942:WARNING:/tmp/ipykernel_37455/1986475901.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:44,974:WARNING:/tmp/ipykernel_37455/853982955.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 17:59:49,009:WARNING:/tmp/ipykernel_37455/3990744893.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:00:40,212:WARNING:/tmp/ipykernel_37455/1739199395.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:10,194:WARNING:/tmp/ipykernel_37455/1739199395.py:18: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:29,768:WARNING:/tmp/ipykernel_37455/3473921746.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:31,303:WARNING:/tmp/ipykernel_37455/3473921746.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:32,126:WARNING:/tmp/ipykernel_37455/3473921746.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:32,670:WARNING:/tmp/ipykernel_37455/3473921746.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:33,020:WARNING:/tmp/ipykernel_37455/3473921746.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:01:50,108:WARNING:/tmp/ipykernel_37455/484371659.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:02:31,151:WARNING:/tmp/ipykernel_37455/2643587272.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:04:08,701:WARNING:/tmp/ipykernel_37455/1417667597.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', (maes /  maes[0] - 1) / (rmses / rmses[0]- 1))
+
+2023-06-27 18:04:24,800:WARNING:/tmp/ipykernel_37455/2180555099.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1)).round(4))
+
+2023-06-27 18:04:32,971:WARNING:/tmp/ipykernel_37455/1692201223.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1)).round(4))
+
+2023-06-27 18:04:52,628:WARNING:/tmp/ipykernel_37455/3136051441.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:05:26,068:WARNING:/tmp/ipykernel_37455/1238972161.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:06:38,663:WARNING:/tmp/ipykernel_37455/163434494.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:07:44,861:WARNING:/tmp/ipykernel_37455/1513386980.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:08:22,438:WARNING:/tmp/ipykernel_37455/151928425.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:14:42,452:WARNING:/tmp/ipykernel_37455/3043007753.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:18,631:WARNING:/tmp/ipykernel_37455/3124888488.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:32,003:WARNING:/tmp/ipykernel_37455/461175912.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:36,494:WARNING:/tmp/ipykernel_37455/238302357.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:40,278:WARNING:/tmp/ipykernel_37455/206784170.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:45,013:WARNING:/tmp/ipykernel_37455/3896058741.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:15:55,491:WARNING:/tmp/ipykernel_37455/3614250959.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:16:13,794:WARNING:/tmp/ipykernel_37455/2977703107.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:16:27,987:WARNING:/tmp/ipykernel_37455/4043448603.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:17:47,105:WARNING:/tmp/ipykernel_37455/567436391.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:17:55,190:WARNING:/tmp/ipykernel_37455/2876956777.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:18:16,294:WARNING:/tmp/ipykernel_37455/2580770332.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:18:26,395:WARNING:/tmp/ipykernel_37455/3522965518.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:18:32,772:WARNING:/tmp/ipykernel_37455/3829884166.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:18:40,762:WARNING:/tmp/ipykernel_37455/1235761160.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:18:52,544:WARNING:/tmp/ipykernel_37455/3552308702.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:19:02,670:WARNING:/tmp/ipykernel_37455/149717475.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:19:07,421:WARNING:/tmp/ipykernel_37455/3611740391.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:19:46,332:WARNING:/tmp/ipykernel_37455/3972342321.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:19:57,799:WARNING:/tmp/ipykernel_37455/2742368525.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:20:37,226:WARNING:/tmp/ipykernel_37455/3166665422.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:20:44,519:WARNING:/tmp/ipykernel_37455/2698152695.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:20:53,700:WARNING:/tmp/ipykernel_37455/3166665422.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:20:59,895:WARNING:/tmp/ipykernel_37455/2158063817.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:21:11,914:WARNING:/tmp/ipykernel_37455/1058175104.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:21:19,674:WARNING:/tmp/ipykernel_37455/4207155654.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:21:29,079:WARNING:/tmp/ipykernel_37455/132455256.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:21:51,731:WARNING:/tmp/ipykernel_37455/3187993870.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:21:57,023:WARNING:/tmp/ipykernel_37455/172031572.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:22:14,057:WARNING:/tmp/ipykernel_37455/2633065843.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:22:31,687:WARNING:/tmp/ipykernel_37455/4266001137.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:22:38,583:WARNING:/tmp/ipykernel_37455/1135722241.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:22:45,950:WARNING:/tmp/ipykernel_37455/2635893398.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:23:00,437:WARNING:/tmp/ipykernel_37455/2445629630.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:23:13,068:WARNING:/tmp/ipykernel_37455/1651948870.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:23:54,729:WARNING:/tmp/ipykernel_37455/2789427146.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:24:08,938:WARNING:/tmp/ipykernel_37455/3607617343.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:24:19,941:WARNING:/tmp/ipykernel_37455/3563507135.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:24:26,007:WARNING:/tmp/ipykernel_37455/3247211322.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:25:26,415:WARNING:/tmp/ipykernel_37455/3388834662.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:26:19,213:WARNING:/tmp/ipykernel_37455/763841130.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:27:39,442:WARNING:/tmp/ipykernel_37455/1141412533.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:27:45,185:WARNING:/tmp/ipykernel_37455/4172006228.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:27:59,793:WARNING:/tmp/ipykernel_37455/1527147105.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:29:37,968:WARNING:/tmp/ipykernel_37455/4151358158.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:31:00,735:WARNING:/tmp/ipykernel_37455/718677464.py:19: RuntimeWarning: invalid value encountered in true_divide
+  print('frac:', ((maes /  maes[0] - 1) / (rmses / rmses[0]- 1))[1:].round(4))
+
+2023-06-27 18:35:25,240:WARNING:/home/olihauke/.asdf/installs/python/miniconda3-latest/envs/env-tff/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3474: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+
+2023-06-27 18:35:25,242:WARNING:/home/olihauke/.asdf/installs/python/miniconda3-latest/envs/env-tff/lib/python3.9/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+

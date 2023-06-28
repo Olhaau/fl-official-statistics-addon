@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import os
-import tqdm
 from sklearn.model_selection import train_test_split, RepeatedKFold
 from sklearn.metrics import r2_score
 # r2 only available in tf-nightly
@@ -348,8 +346,7 @@ def train_fed(model, train_data: list,
 
     return {'process': process, 'history': hist, 'state': state}
 
-def plot_hist(
-  history, 
+def plot_hist(history, 
   msr: str = "r2_score", 
   title: str = None,
   ylim : list[float] = [0.5, 0.9], 
